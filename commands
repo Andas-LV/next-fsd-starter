@@ -2,6 +2,7 @@ pull from dev - git merge development(main)
 push to target - git push target_repo main(main)
 
 component cli - pnpm dlx generate-react-cli component ComponentName
+feature cli -  pnpm generate:feature FeatureName
 prettier full - pnpm dlx prettier -w .
 
 Чтобы очистить кэш - pnpm store prune

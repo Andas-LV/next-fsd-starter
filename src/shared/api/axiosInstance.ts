@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getSession } from "next-auth/react";
-import { toCamelCase, toSnakeCase } from "@/core/config/case";
+import { toCamelCase, toSnakeCase } from "@/shared/utils/case";
 import { getAuthToken } from "@/core/config/cookie";
 
 const axiosInstance = axios.create({
