@@ -16,9 +16,9 @@ const fileConfigs = (camel: string, pascal: string) => [
 	{
 		dir: "",
 		name: "index.ts",
-		content: `export * from './service/${camel}.service';
+		content: `export { fetch${pascal}, create${pascal}, fetch${pascal}ById } from './service/${camel}.service';
 			export * from './store/use${pascal}Store';
-			export * from './types/${camel}Types';`,
+			export type { I${pascal} } from './types/${camel}Types';`,
 	},
 	{
 		dir: "service",

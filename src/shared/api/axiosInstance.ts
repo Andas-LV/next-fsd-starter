@@ -3,6 +3,8 @@ import { getSession } from "next-auth/react";
 import { toCamelCase, toSnakeCase } from "@/shared/utils/case";
 import { getAuthToken } from "@/core/config/cookie";
 
+const isClient = typeof window !== "undefined"
+
 const axiosInstance = axios.create({
 	baseURL: process.env.NEXT_BACKEND_URL,
 	headers: {
@@ -12,7 +14,7 @@ const axiosInstance = axios.create({
 
 // 👉 Request interceptor
 axiosInstance.interceptors.request.use(async (config) => {
-	if (typeof window !== "undefined") {
+	if (isClient) {
 		const token = getAuthToken();
 		if (token) {
 			config.headers.Authorization = `Bearer ${token}`;
