@@ -4,7 +4,7 @@ import CustomInput from "@/shared/components/Input";
 export default function Home() {
 	return (
 		<div className={"flex flex-col gap-4"}>
-			<ClientSlugPage id={"666"} />
+			<ClientSlugPage id={"777"} />
 			<div className="flex flex-col gap-y-2 m-auto">
 				<CustomInput
 					label="Email"
