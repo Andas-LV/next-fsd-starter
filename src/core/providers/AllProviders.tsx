@@ -2,6 +2,7 @@
 // import { SessionProvider } from "next-auth/react";
 import React from "react";
 import { ThemeProvider } from "./ThemeProvider";
+import { QueryProvider } from "./QueryProvider";
 
 export function AllProviders({
 	children,
@@ -9,8 +10,8 @@ export function AllProviders({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ThemeProvider>
-			{children}
-		</ThemeProvider>
+		<QueryProvider>
+			<ThemeProvider>{children}</ThemeProvider>
+		</QueryProvider>
 	);
 }
